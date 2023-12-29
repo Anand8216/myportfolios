@@ -1,0 +1,20 @@
+#contact{
+    margin-top:20%;
+}
+
+
+@media screen and (max-width:1024px) {
+    #contact{
+      margin-top:400%;
+    
+    }
+}
+
+/* =========================MEDIA QUERIES (SMALL DEVICES)================*/
+@media screen and (max-width:600px) {
+    #contact{
+        margin-top:430%;
+    
+    }
+     
+}

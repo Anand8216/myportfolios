@@ -1,0 +1,94 @@
+
+
+
+.main_div {
+    text-align: center;
+    margin-top: 30px;
+    height: 100vh;
+    margin-bottom: 8rem;
+  }
+  
+  .cards_container {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2.5rem;
+    margin-right: 30rem;
+    align-items: center;
+    width: 75%;
+    margin:0 auto;
+   
+ 
+  }
+  
+  .carde{
+    width: 270px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    padding:1.3rem;
+    border-radius:2rem;
+    border:1px solid transparent;
+    transition:all 400ms ease;
+    background:#2c2c6c;
+  }
+  .carde:hover{
+    background: transparent;
+  }
+  
+  .carde img {
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    margin-top: 10px;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+  }
+  h5{
+    color: white;
+  }
+  
+  /* Optional: Adding some hover effect */
+  .carde:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+  @media screen and (max-width:1024px) {
+    .cards_container{
+        grid-template-columns: 1fr 1fr;
+        gap:1.2rem;
+    }
+    .main_div{
+      margin-top: 550%;
+    }
+}
+
+/* =========================MEDIA QUERIES (SMALL DEVICES)================*/
+@media screen and (max-width:600px) {
+     .cards_container{
+         grid-template-columns: 1fr;
+         gap:1rem;
+     }
+     .main_div{
+      margin-top: 620%;
+    }
+    
+     
+}
+ 
+    
+  

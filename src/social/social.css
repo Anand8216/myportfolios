@@ -1,0 +1,106 @@
+
+  .bod{
+    top: 2rem;
+    left: 1rem; /* Adjust the left position to set the initial position of the menu */
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+  }
+  .bod.active .menu {
+    right: 0; /* Show the menu when .bod has the 'active' class */
+  }
+  
+  .menu{
+    position:relative;
+    width:240px;
+    right: -160px;
+    height:240px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+    left: 60rem;
+    
+     
+  }
+  .menu .toggle{
+    position:relative;
+    height:40px;
+    width:40px;
+    background:rgba(122, 119, 119, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius:50%;
+    box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:yellow;
+    font-size:2rem;
+    cursor:pointer;
+    transition:1.25s;
+    z-index:5;
+  }
+  .menu.active .toggle{
+    transform:rotate(360deg);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15),
+      0 0 0 2px #333,
+      0 0 0 8px rgba(122, 119, 119, 0.3);
+  }
+  .menu li{
+    position:absolute;
+    left:0;
+ 
+    list-style:none;
+    transition:0.5s;
+    transform:rotate(calc(360deg/8 * var(--i)));
+    transform-origin:140px;
+    scale:0;
+    transition-delay: calc(0.05s * var(--i));
+  }
+  .menu.active li{
+    scale:1;
+  }
+  .menu li a{
+    position:relative;
+    display:flex;
+   transform:rotate(calc(360deg/-8 * var(--i)));
+    width:40px;
+    height:40px;
+    background-color:rgba(122, 119, 119, 0.3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:1.65rem;
+    color:var(--clr);
+     box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    transition:0.5s;
+  }
+  .menu li:hover a{
+    font-size:2.5rem;
+    box-shadow:0 0 0 2px var(--clr),
+      0 0 0 6px #fff;
+  }
+
+
+
+
+
+
+  @media screen and (max-width:1024px) {
+    
+    .bod{
+      margin-top: 550%;
+    }
+}
+
+/* =========================MEDIA QUERIES (SMALL DEVICES)================*/
+@media screen and (max-width:600px) {
+     
+     .bod{
+      margin-top: 20%;
+    }
+    
+     
+}

@@ -1,0 +1,51 @@
+.profileImg{
+    width:700px;
+    height:430px;
+   margin-bottom: 60px;
+    border-radius: 10px;
+}
+
+#isd{
+  width:700px;
+    height:430px;
+    background:rgba(122, 119, 119, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius:10px ;
+}
+
+
+@media screen and (max-width:1024px) {
+    #home{
+      margin-top:25%;
+    
+    }
+}
+
+/* =========================MEDIA QUERIES (SMALL DEVICES)================*/
+@media screen and (max-width:600px) {
+    #home{
+        margin-top:25%;
+        display: flex;
+        
+      
+      }
+      #isd{
+        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:500px;
+      height: 800px;
+      border-radius: 50%;
+      overflow-x: hidden;
+        
+      }
+      .profileImg{
+        width:400px;
+        height:430px;
+       margin-bottom: 65px;
+        border-radius: 10px;
+    }
+      
+     
+}
